@@ -44,5 +44,10 @@ This will ensure that the height of the `SizedBox` is responsive, adapting to di
 
 Contributions to this package are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or create a pull request on GitHub.
 
+## License
+
+This package is licensed under the [MIT License](LICENSE).
+
+---
 
 **Happy Fluttering!** 🚀
