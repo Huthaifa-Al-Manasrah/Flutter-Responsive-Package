@@ -1,24 +1,21 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/services.dart';
+import 'package:flutter/material.dart';
 
 class Responsive {
   static MediaQueryData? _mediaQueryData;
   static double? screenWidth;
   static double? screenHeight;
-  static double? defaultSize;
-  static Orientation? orientation;
+  static double? customWidth;
+  static double? customHeight;
 
 
-  void init(BuildContext context) {
+  static void init(BuildContext context,  {required double width, required double height}) {
+    customWidth = width;
+    customHeight = height;
     _mediaQueryData = MediaQuery.of(context);
     screenWidth = _mediaQueryData!.size.width;
     screenHeight = _mediaQueryData!.size.height;
-    orientation = _mediaQueryData!.orientation;
     if(screenHeight! < screenWidth!){
       screenHeight = (screenHeight! + screenWidth!);
-      // SystemChrome.setPreferredOrientations([
-      //   DeviceOrientation.portraitUp,
-      // ]);
     }
   }
 }

@@ -34,11 +34,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    Responsive().init(context);
-
-    double screenWidget = MediaQuery.of(context).size.width;
-    double screenHeight = MediaQuery.of(context).size.height;
-
+    Responsive.init(context, height: 926.0, width: 428.0);
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -64,14 +60,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: [
                       Container(
                           color: Colors.green,
-                          width: SetSize.getWidgetResponsiveWidth(34),
+                          width: SetSize.getWidgetResponsiveWidth(30),
                           height: SetSize.getWidgetResponsiveHeight(30)),
                       SizedBox(
                         width: SetSize.getWidgetResponsiveWidth(40),
                       ),
                       Container(
                           color: Colors.green,
-                          width: SetSize.getWidgetResponsiveWidth(34),
+                          width: SetSize.getWidgetResponsiveWidth(30),
                           height: SetSize.getWidgetResponsiveHeight(30)),
                     ],
                   )
@@ -170,7 +166,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: SetSize.getWidgetResponsiveHeight(41),
                 child: SizedBox(
                   width: SetSize.getWidgetResponsiveWidth(211),
-                  child: FittedBox(child: Text('Generate Weekly Menu')),
+                  child: const FittedBox(child: Text('Generate Weekly Menu')),
                 ),
               ),
               SizedBox(
@@ -182,7 +178,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: SetSize.getWidgetResponsiveHeight(41),
                 child: SizedBox(
                   width: SetSize.getWidgetResponsiveWidth(259),
-                  child: FittedBox(child: Text('Generate Dinner Party Menu')),
+                  child: const FittedBox(child: Text('Generate Dinner Party Menu')),
                 ),
               ),
               SizedBox(
